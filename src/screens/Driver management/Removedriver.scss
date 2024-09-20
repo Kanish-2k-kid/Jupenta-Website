@@ -1,0 +1,28 @@
+.remove-driver {
+  text-align: center;
+  padding: 40px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 300px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ccc;
+    }
+  }
+}

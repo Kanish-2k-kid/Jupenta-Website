@@ -1,0 +1,48 @@
+.monthly-summary-report {
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+
+  .report-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .report-item {
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s ease-in-out;
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: var(--highlight-color);
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    color: var(--text-color-muted);
+  }
+}

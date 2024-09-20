@@ -1,0 +1,33 @@
+.school-selection-notifications {
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .school-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .school-card {
+      cursor: pointer;
+      padding: 20px;
+      width: 200px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #555;
+      }
+    }
+  }
+}

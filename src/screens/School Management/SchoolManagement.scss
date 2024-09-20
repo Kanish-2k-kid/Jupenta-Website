@@ -1,0 +1,249 @@
+/* Add these styles in SchoolManagement.scss or the relevant CSS file */
+
+.area-table {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+.area-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.school-logo {
+  max-width: 50px;
+  height: auto;
+}
+
+.school-management {
+  font-family: Arial, sans-serif;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar h2 {
+    margin: 0;
+  }
+
+  .navbar nav button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navbar nav button:hover {
+    background-color: #0056b3;
+  }
+
+  .area-table {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      thead {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+
+  .school-logo {
+    width: 50px;
+    height: auto;
+  }
+
+  .add-school-form {
+    padding: 20px;
+
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: calc(100% - 16px);
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    th, td {
+      white-space: nowrap;
+    }
+  }
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+.school-logo {
+  width: 50px; /* Adjust size as necessary */
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    white-space: nowrap; /* Prevents wrapping */
+  }
+
+  th, td {
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+}
+
+.school-management {
+  padding: 20px;
+  background-color: #f4f4f4;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 10px;
+    color: white;
+
+    nav {
+      button {
+        background-color: #fff;
+        color: #007bff;
+        padding: 10px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .area-table {
+    margin: 20px 0;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      .school-logo {
+        width: 40px;
+        height: auto;
+      }
+    }
+  }
+
+  .school-management-section {
+    margin: 20px 0;
+    input {
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .school-list {
+    margin: 20px 0;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        .school-details {
+          display: flex;
+          justify-content: space-between;
+          button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

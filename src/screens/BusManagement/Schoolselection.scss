@@ -1,0 +1,53 @@
+.school-selection {
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh; /* Ensures the screen covers full height */
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333; /* Darker color for the heading */
+    font-weight: 600; /* Bolder heading for emphasis */
+  }
+
+  .school-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    margin-top: 20px;
+  }
+
+  .school-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 200px; /* Fixed width for uniformity */
+    background-color: white; /* Clean white card background */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover animation */
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    }
+
+    .school-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #555; /* Softer text color */
+      font-weight: 500; /* Medium font weight for readability */
+    }
+  }
+}

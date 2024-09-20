@@ -1,0 +1,33 @@
+.payment-gateway-integration {
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh; /* Ensures full-screen coverage */
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333; /* Darker heading color */
+    font-weight: 600; /* Stronger heading */
+  }
+
+  p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  .configure-btn {
+    padding: 15px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}

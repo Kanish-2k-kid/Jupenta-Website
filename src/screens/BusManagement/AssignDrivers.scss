@@ -1,0 +1,78 @@
+.assign-drivers {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+
+  .routes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .route-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .driver-selection {
+      margin-bottom: 10px;
+
+      .driver-label {
+        font-size: 16px;
+        color: #333;
+        margin-right: 10px;
+      }
+
+      .driver-dropdown {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #f1f1f1;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .assigned-driver {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #28a745;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+  }
+}

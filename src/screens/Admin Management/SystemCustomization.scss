@@ -1,0 +1,68 @@
+.system-customization {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f8fa;
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .customization-section {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    select {
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .customization-buttons {
+    display: flex;
+    justify-content: space-around;
+
+    .save-button,
+    .reset-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .save-button {
+      background-color: #007bff;
+      color: white;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    .reset-button {
+      background-color: #ff5c5c;
+      color: white;
+
+      &:hover {
+        background-color: #e60000;
+      }
+    }
+  }
+}

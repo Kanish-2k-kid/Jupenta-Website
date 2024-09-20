@@ -1,0 +1,66 @@
+.school-selection {
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh; /* Ensure full-screen layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Light background color for better contrast */
+
+  .driver-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Space between driver info and options */
+    text-align: left; /* Align text to the left */
+
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 5px 0;
+    }
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px; /* Space between heading and options */
+  }
+
+  .school-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Change to flex for horizontal layout */
+    gap: 20px; /* Space between option cards */
+    justify-content: center; /* Center align cards horizontally */
+  }
+
+  .school-list li {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e8f0fe; /* Subtle hover background change */
+      transform: translateY(-5px); /* Slight hover effect */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    }
+  }
+}

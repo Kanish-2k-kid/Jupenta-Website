@@ -1,0 +1,39 @@
+.dashboard-overview {
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    display: flex;
+    gap: 20px;
+
+    .stat-card {
+      background-color: #f8f9fa;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: 18px;
+        color: #333;
+      }
+
+      p {
+        font-size: 24px;
+        color: #007bff;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
