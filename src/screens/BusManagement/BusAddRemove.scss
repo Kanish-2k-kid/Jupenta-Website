@@ -1,10 +1,10 @@
 .bus-add-remove {
-  background-color: #f9f9f9; // Light grey background for better contrast
+  background-color: #f9f9f9;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Enhanced shadow for depth
-  max-width: 800px; // Limit the width for a more centered layout
-  margin: 0 auto; // Center the container
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
 
   h1 {
     margin-bottom: 20px;
@@ -16,23 +16,31 @@
 
   .add-bus-form {
     display: flex;
-    flex-direction: column; // Change to column layout for easier input stacking
-    gap: 15px; // More spacing between inputs
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 20px;
 
-    input, select {
-      padding: 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      transition: border 0.3s ease;
+    .form-row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
 
-      &:focus {
-        border: 1px solid #007bff; // Highlight border on focus
-        outline: none; // Remove default outline
+      input, select {
+        flex: 1 1 48%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: border 0.3s ease;
+
+        &:focus {
+          border: 1px solid #007bff;
+          outline: none;
+        }
       }
     }
 
     button {
+      flex: 1 1 100%;
       padding: 12px 20px;
       background-color: #007bff;
       color: white;
@@ -42,42 +50,42 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #0056b3; // Darker blue on hover
+        background-color: #0056b3;
       }
     }
+  }
 
-    .gps-phone {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; // Space between label and select
-    }
+  // Updated table container to avoid overflow
+  .table-container {
+    max-width: 100%; 
+    overflow-x: auto;
+    padding-right: 20px; // Padding to avoid content touching edges
   }
 
   .bus-table {
     width: 100%;
+    min-width: 900px;
+    margin-left: 0; // Align to the left
     border-collapse: collapse;
-    text-align: left;
 
     th, td {
-      padding: 12px; // Increase padding for better spacing
+      padding: 12px;
       border-bottom: 1px solid #ddd;
+      text-align: left;
+      white-space: nowrap;
     }
 
     th {
-      background-color: #007bff; // Blue header
-      color: white; // White text on header
-      font-weight: bold; // Bold header text
-    }
-
-    td {
-      vertical-align: middle;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
     }
 
     .driver-image {
-      width: 50px; // Fixed width for the image
-      height: 50px; // Fixed height for the image
-      border-radius: 50%; // Circular image
-      object-fit: cover; // Cover the area
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .remove-btn {
@@ -90,8 +98,52 @@
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #c82333; // Darker red on hover
+        background-color: #c82333;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .add-bus-form {
+      flex-direction: column;
+
+      .form-row {
+        flex-direction: column;
+      }
+
+      input, select, button {
+        flex: 1 1 100%;
+      }
+    }
+
+    .bus-table {
+      display: block;
+      overflow-x: auto;
+      width: 100%;
+    }
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    tr {
+      margin-bottom: 10px;
+    }
+
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
     }
   }
 }

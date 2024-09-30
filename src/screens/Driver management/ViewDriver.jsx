@@ -12,6 +12,7 @@ const ViewDrivers = () => {
       experience: "10 years",
       busNumber: "12A",
       busId: "B001",
+      license: "ABCD1234",  // Added license
       image: "https://via.placeholder.com/50", // Placeholder image URL
     },
     {
@@ -23,6 +24,7 @@ const ViewDrivers = () => {
       experience: "15 years",
       busNumber: "15B",
       busId: "B002",
+      license: "XYZ9876", // Added license
       image: "https://via.placeholder.com/50", // Placeholder image URL
     },
   ];
@@ -42,6 +44,7 @@ const ViewDrivers = () => {
             <th>Experience</th>
             <th>Bus Number</th>
             <th>Bus ID</th>
+            <th>License</th> {/* Added License header */}
           </tr>
         </thead>
         <tbody>
@@ -58,6 +61,7 @@ const ViewDrivers = () => {
               <td>{driver.experience}</td>
               <td>{driver.busNumber}</td>
               <td>{driver.busId}</td>
+              <td>{driver.license}</td> {/* Added License data */}
             </tr>
           ))}
         </tbody>

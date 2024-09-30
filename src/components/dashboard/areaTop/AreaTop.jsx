@@ -4,16 +4,17 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { SidebarContext } from "../../../context/SidebarContext";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { addDays } from "date-fns";
+import { addDays, subDays } from "date-fns"; // Import subDays for calculating past dates
 import { DateRange } from "react-date-range";
 
 const AreaTop = () => {
   const { openSidebar } = useContext(SidebarContext);
 
+  // Set the start date to 7 days ago and the end date to today
   const [state, setState] = useState([
     {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
+      startDate: subDays(new Date(), 7), // 7 days ago
+      endDate: new Date(), // today
       key: "selection",
     },
   ]);
@@ -48,8 +49,9 @@ const AreaTop = () => {
         >
           <MdOutlineMenu size={24} />
         </button>
-        <h2 className="area-top-title"><h3>Welcome Kanish</h3>Dashboard </h2>
-      
+        <h2 className="area-top-title">
+          <h3>Welcome Kanish SS</h3>Dashboard
+        </h2>
       </div>
       <div className="area-top-r">
         <div
