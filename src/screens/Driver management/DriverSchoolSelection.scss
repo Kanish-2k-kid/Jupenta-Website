@@ -1,66 +1,53 @@
 .school-selection {
   text-align: center;
   padding: 40px;
-  min-height: 100vh; /* Ensure full-screen layout */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Light background color for better contrast */
-
-  .driver-info {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Space between driver info and options */
-    text-align: left; /* Align text to the left */
-
-    h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #555;
-      margin: 5px 0;
-    }
-  }
+  min-height: 100vh; /* Ensures full-screen coverage */
 
   h1 {
+    margin-bottom: 30px;
     font-size: 28px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 40px; /* Space between heading and options */
+    color: #ffffff; /* Darker heading color */
+    font-weight: 600; /* Stronger heading */
   }
 
   .school-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Change to flex for horizontal layout */
-    gap: 20px; /* Space between option cards */
-    justify-content: center; /* Center align cards horizontally */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Responsive layout for small screens */
+    margin-top: 20px;
   }
 
-  .school-list li {
-    background-color: #ffffff;
-    padding: 25px 40px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-    font-weight: 500;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  .school-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 200px; /* Fixed width for uniform look */
+    background-color: white; /* Clean card background */
+    border: 1px solid #e0e0e0; /* Subtle card border */
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 
     &:hover {
-      background-color: #e8f0fe; /* Subtle hover background change */
-      transform: translateY(-5px); /* Slight hover effect */
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    }
+
+    .school-logo {
+      width: 170px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px; /* Space below the logo */
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #555; /* Softer color for school names */
+      font-weight: 500;
     }
   }
 }

@@ -1,32 +1,53 @@
-.school-selection-page {
-  padding: 40px;
-  background-color: #f7f9fc;
+.school-selection {
   text-align: center;
+  padding: 40px;
+  min-height: 100vh; /* Ensures full-screen coverage */
 
   h1 {
-    font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #fff; /* Darker heading color */
+    font-weight: 600; /* Stronger heading */
   }
 
   .school-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Responsive layout for small screens */
+    margin-top: 20px;
   }
 
   .school-card {
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 200px; /* Fixed width for uniform look */
+    background-color: white; /* Clean card background */
+    border: 1px solid #e0e0e0; /* Subtle card border */
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    }
+
+    .school-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px; /* Space below the logo */
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #555; /* Softer color for school names */
+      font-weight: 500;
     }
   }
 }

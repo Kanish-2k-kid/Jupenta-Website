@@ -1,40 +1,93 @@
 .update-driver {
-  text-align: center;
-  padding: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #f0f0f0;
+  min-height: 100vh;
 
   h1 {
-    margin-bottom: 30px;
+    text-align: center;
+    color: #00aaff;
   }
 
-  select {
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 300px;
-  }
-
-  .update-form {
-    margin-top: 20px;
-    label {
-      margin-top: 10px;
-      display: block;
+  .driver-table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    color: #333;
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
     }
 
-    input {
-      padding: 10px;
-      margin: 5px;
-      border-radius: 8px;
-      width: 300px;
+    th {
+      background-color: #fff;
+    }
+
+    td {
+      background-color: #fff;
     }
 
     button {
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
+      background-color: #00aaff;
       border: none;
-      border-radius: 8px;
+      color: #fff;
+      padding: 8px 12px;
       cursor: pointer;
-      margin-top: 20px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #008fcc;
+      }
+    }
+  }
+
+  .update-form {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 20px auto;
+
+    h2 {
+      text-align: center;
+      color: #00aaff;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #555;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #333;
+
+      &:focus {
+        border-color: #00aaff;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00aaff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #008fcc;
+      }
     }
   }
 }

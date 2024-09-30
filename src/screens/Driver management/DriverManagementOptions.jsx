@@ -1,9 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./DriverManagementOptions.scss";
 
 const DriverManagementOptions = () => {
   const { schoolId } = useParams();
+  const navigate = useNavigate(); // Hook for programmatic navigation
 
   return (
     <div className="driver-management-options">
@@ -11,38 +12,24 @@ const DriverManagementOptions = () => {
       <p className="description">
         Manage all driver-related operations for School {schoolId}. You can add, remove, update drivers, and more.
       </p>
-      <ul className="options-list">
-        <li>
-          <a href={`/driver-management/${schoolId}/add-driver`} className="option-card">
-            <i className="fas fa-plus-circle"></i> Add Driver
-          </a>
-        </li>
-        <li>
-          <a href={`/driver-management/${schoolId}/remove-driver`} className="option-card">
-            <i className="fas fa-minus-circle"></i> Remove Driver
-          </a>
-        </li>
-        <li>
-          <a href={`/driver-management/${schoolId}/update-driver`} className="option-card">
-            <i className="fas fa-edit"></i> Update Driver
-          </a>
-        </li>
-        <li>
-          <a href={`/driver-management/${schoolId}/assign-driver`} className="option-card">
-            <i className="fas fa-route"></i> Assign Driver to Bus/Route
-          </a>
-        </li>
-        <li>
-          <a href={`/driver-management/${schoolId}/view-drivers`} className="option-card">
-            <i className="fas fa-users"></i> View Drivers & Info
-          </a>
-        </li>
-        <li>
-          <a href={`/driver-management/${schoolId}/track-performance`} className="option-card">
-            <i className="fas fa-chart-line"></i> Track Driver Performance
-          </a>
-        </li>
-      </ul>
+      <div className="options-list">
+        <div className="option-card" onClick={() => navigate(`/driver-management/${schoolId}/remove-driver`)}>
+          <i className="fas fa-minus-circle"></i>
+          <h2>Remove Driver</h2>
+        </div>
+        <div className="option-card" onClick={() => navigate(`/driver-management/${schoolId}/update-driver`)}>
+          <i className="fas fa-edit"></i>
+          <h2>Update Driver</h2>
+        </div>
+        <div className="option-card" onClick={() => navigate(`/driver-management/${schoolId}/view-drivers`)}>
+          <i className="fas fa-users"></i>
+          <h2>View Drivers & Info</h2>
+        </div>
+        <div className="option-card" onClick={() => navigate(`/driver-management/${schoolId}/track-performance`)}>
+          <i className="fas fa-chart-line"></i>
+          <h2>Track Driver Performance</h2>
+        </div>
+      </div>
     </div>
   );
 };

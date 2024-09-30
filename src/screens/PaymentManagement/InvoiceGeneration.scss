@@ -1,12 +1,13 @@
 .invoice-generation {
   text-align: center;
   padding: 40px;
-  min-height: 100vh; /* Ensures full-screen coverage */
+  min-height: 100vh;
+  background-color: whitesmoke; /* Ensures full-screen coverage */
 
   h1 {
     margin-bottom: 30px;
     font-size: 28px;
-    color: #ffffff; /* Darker heading color */
+    color: #222; /* Darker heading color */
     font-weight: 600; /* Stronger heading */
   }
 
@@ -18,7 +19,7 @@
 
     label {
       font-size: 18px;
-      color: #ffffff;
+      color: #222;
       display: flex;
       flex-direction: column;
       align-items: flex-start;

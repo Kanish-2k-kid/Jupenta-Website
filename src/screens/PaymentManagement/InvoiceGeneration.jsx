@@ -64,7 +64,7 @@ const InvoiceGeneration = () => {
           />
         </label>
         <label>
-          Date:
+          Expiry Date:
           <input
             type="date"
             name="date"

@@ -126,7 +126,7 @@ const SchoolManagement = () => {
       <header className="navbar">
         <h2>School Management</h2>
         <nav>
-          <button onClick={() => toggleView(true)}>View Schools</button>
+          <button onClick={() => toggleView(true)}>View Schools</button><br></br><br></br>
           <button onClick={() => toggleView(false)}>{editingSchool ? "Edit School" : "Add School"}</button>
         </nav>
       </header>
@@ -176,71 +176,109 @@ const SchoolManagement = () => {
       ) : (
         // Add/Edit School Form
         <div className="school-management-section">
-          <h3>{editingSchool ? "Edit School" : "Add a New School"}</h3>
+  <h3>{editingSchool ? "Edit School" : "Add a New School"}</h3>
+  <label>
+    School ID
+    <input
+      type="text"
+      value={newSchool.id}
+      onChange={(e) => setNewSchool({ ...newSchool, id: e.target.value })}
+    />
+  </label>
+  <label>
+    School Name
+    <input
+      type="text"
+      value={newSchool.name}
+      onChange={(e) => setNewSchool({ ...newSchool, name: e.target.value })}
+    />
+  </label>
+  <label>
+    Location :
+    <div className="lat-long-inputs">
+      <div className="lat-input">
+        <label>
+          Latitude
           <input
             type="text"
-            placeholder="School ID"
-            value={newSchool.id}
-            onChange={(e) => setNewSchool({ ...newSchool, id: e.target.value })}
+            value={newSchool.latitude}
+            onChange={(e) => setNewSchool({ ...newSchool, latitude: e.target.value })}
           />
+        </label>
+      </div>
+      <div className="long-input">
+        <label>
+          Longitude
           <input
             type="text"
-            placeholder="School Name"
-            value={newSchool.name}
-            onChange={(e) => setNewSchool({ ...newSchool, name: e.target.value })}
+            value={newSchool.longitude}
+            onChange={(e) => setNewSchool({ ...newSchool, longitude: e.target.value })}
           />
-          <input
-            type="text"
-            placeholder="Location"
-            value={newSchool.location}
-            onChange={(e) => setNewSchool({ ...newSchool, location: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Number of Buses"
-            value={newSchool.buses}
-            onChange={(e) => setNewSchool({ ...newSchool, buses: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Number of Students"
-            value={newSchool.students}
-            onChange={(e) => setNewSchool({ ...newSchool, students: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Total Amount"
-            value={newSchool.totamount}
-            onChange={(e) => setNewSchool({ ...newSchool, totamount: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Revenue Generated"
-            value={newSchool.revgen}
-            onChange={(e) => setNewSchool({ ...newSchool, revgen: e.target.value })}
-          />
-          <input
-            type="number"
-            placeholder="Profit"
-            value={newSchool.profit}
-            onChange={(e) => setNewSchool({ ...newSchool, profit: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Badge"
-            value={newSchool.badge}
-            onChange={(e) => setNewSchool({ ...newSchool, badge: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="Logo (URL)"
-            value={newSchool.logo}
-            onChange={(e) => setNewSchool({ ...newSchool, logo: e.target.value })}
-          />
-          <button onClick={addSchool}>
-            {editingSchool ? "Save Changes" : "Add School"}
-          </button>
-        </div>
+        </label>
+      </div>
+    </div>
+  </label>
+  <label>
+    Number of Buses
+    <input
+      type="number"
+      value={newSchool.buses}
+      onChange={(e) => setNewSchool({ ...newSchool, buses: e.target.value })}
+    />
+  </label>
+  <label>
+    Number of Students
+    <input
+      type="number"
+      value={newSchool.students}
+      onChange={(e) => setNewSchool({ ...newSchool, students: e.target.value })}
+    />
+  </label>
+  <label>
+    Total Amount
+    <input
+      type="number"
+      value={newSchool.totamount}
+      onChange={(e) => setNewSchool({ ...newSchool, totamount: e.target.value })}
+    />
+  </label>
+  <label>
+    Revenue Generated
+    <input
+      type="number"
+      value={newSchool.revgen}
+      onChange={(e) => setNewSchool({ ...newSchool, revgen: e.target.value })}
+    />
+  </label>
+  <label>
+    Profit
+    <input
+      type="number"
+      value={newSchool.profit}
+      onChange={(e) => setNewSchool({ ...newSchool, profit: e.target.value })}
+    />
+  </label>
+  <label>
+    Badge
+    <input
+      type="text"
+      value={newSchool.badge}
+      onChange={(e) => setNewSchool({ ...newSchool, badge: e.target.value })}
+    />
+  </label>
+  <label>
+    Logo (URL)
+    <input
+      type="text"
+      value={newSchool.logo}
+      onChange={(e) => setNewSchool({ ...newSchool, logo: e.target.value })}
+    />
+  </label>
+  <button onClick={addSchool}>
+    {editingSchool ? "Save Changes" : "Add School"}
+  </button>
+</div>
+
       )}
     </div>
   );

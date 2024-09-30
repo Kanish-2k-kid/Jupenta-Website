@@ -39,7 +39,7 @@
       width: 100%;
       border-collapse: collapse;
       color: var(--text-color-inverted);
-
+    
       td,
       th {
         padding: 14px 12px;
@@ -52,7 +52,7 @@
       thead {
         text-align: left;
         font-size: 17px;
-        background-color: var(--thead-bg-color);
+        color: #222;
 
         th {
           &:last-child {

@@ -4,20 +4,29 @@ import './BusAddRemove.scss'; // Ensure you style the page here
 const BusAddRemove = () => {
   // Initial state for buses
   const [buses, setBuses] = useState([
-    { id: 1, number: 'Bus 101', driver: 'John Doe' },
-    { id: 2, number: 'Bus 102', driver: 'Jane Smith' },
+    { id: 1, number: 'Bus 101', driver: 'John Doe', aadhar: '46365476545', age: '32', image: 'jh65bvutf', count: '56', gps: 'No', app: 'Yes' },
+    { id: 2, number: 'Bus 102', driver: 'Jane Smith', aadhar: '87665675667', age: '29', image: 'hg765g7t', count: '67', gps: 'Yes', app: 'No' },
   ]);
 
   // State for the new bus form
-  const [newBus, setNewBus] = useState({ number: '', driver: '' });
+  const [newBus, setNewBus] = useState({
+    number: '',
+    driver: '',
+    aadhar: '',
+    age: '',
+    image: '',
+    count: '',
+    gps: '',
+    app: '',
+  });
 
   // Handle adding a bus
   const handleAddBus = (e) => {
     e.preventDefault();
-    if (newBus.number && newBus.driver) {
+    if (newBus.number && newBus.driver && newBus.aadhar && newBus.age) {
       const newBusData = { id: buses.length + 1, ...newBus };
       setBuses([...buses, newBusData]);
-      setNewBus({ number: '', driver: '' }); // Clear the form
+      setNewBus({ number: '', driver: '', aadhar: '', age: '', image: '', count:'', gps: '', app: '' }); // Clear the form
     }
   };
 
@@ -37,13 +46,62 @@ const BusAddRemove = () => {
           placeholder="Bus Number"
           value={newBus.number}
           onChange={(e) => setNewBus({ ...newBus, number: e.target.value })}
+          required
         />
         <input
           type="text"
           placeholder="Driver Name"
           value={newBus.driver}
           onChange={(e) => setNewBus({ ...newBus, driver: e.target.value })}
+          required
         />
+        <input
+          type="text"
+          placeholder="Driver Aadhar"
+          value={newBus.aadhar}
+          onChange={(e) => setNewBus({ ...newBus, aadhar: e.target.value })}
+          required
+        />
+        <input
+          type="number"
+          placeholder="Driver Age"
+          value={newBus.age}
+          onChange={(e) => setNewBus({ ...newBus, age: e.target.value })}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Driver Image URL"
+          value={newBus.image}
+          onChange={(e) => setNewBus({ ...newBus, image: e.target.value })}
+        />
+        <input
+          type="number"
+          placeholder="Student Count"
+          value={newBus.number}
+          onChange={(e) => setNewBus({ ...newBus, count: e.target.value })}
+          required
+        />
+        <div className="Bus Gps:">
+          <label>Bus GPS:</label>
+          <select
+            value={newBus.gps}
+            onChange={(e) => setNewBus({ ...newBus, gps: e.target.value })}
+          >
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
+        <div className="Mobile App: ">
+          <label>Mobile App:</label>
+          <select
+            value={newBus.app}
+            onChange={(e) => setNewBus({ ...newBus, app: e.target.value })}
+          >
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+          </select>
+        </div>
         <button type="submit">Add Bus</button>
       </form>
 
@@ -53,6 +111,12 @@ const BusAddRemove = () => {
           <tr>
             <th>Bus Number</th>
             <th>Driver</th>
+            <th>Aadhar</th>
+            <th>Age</th>
+            <th>Image</th>
+            <th>S_Count</th>
+            <th>GPS</th>
+            <th>App</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -61,6 +125,14 @@ const BusAddRemove = () => {
             <tr key={bus.id}>
               <td>{bus.number}</td>
               <td>{bus.driver}</td>
+              <td>{bus.aadhar}</td>
+              <td>{bus.age}</td>
+              <td>
+                {bus.image ? <img src={bus.image} alt={`${bus.driver}`} className="driver-image" /> : 'No Image'}
+              </td>
+              <td>{bus.count}</td>
+              <td>{bus.gps}</td>
+              <td>{bus.app}</td>
               <td>
                 <button
                   className="remove-btn"

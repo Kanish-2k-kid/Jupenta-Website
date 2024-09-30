@@ -12,10 +12,9 @@ import {
   MdOutlineLogout,
   MdOutlineMessage,
   MdOutlinePeople,
-  MdOutlineSettings,
   MdOutlineShoppingBag,
 } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.scss";
 import { SidebarContext } from "../../context/SidebarContext";
 
@@ -23,6 +22,7 @@ const Sidebar = () => {
   const { theme } = useContext(ThemeContext);
   const { isSidebarOpen, closeSidebar } = useContext(SidebarContext);
   const navbarRef = useRef(null);
+  const location = useLocation(); // Get the current route
 
   // closing the navbar when clicked outside the sidebar area
   const handleClickOutside = (event) => {
@@ -60,7 +60,12 @@ const Sidebar = () => {
         <div className="sidebar-menu">
           <ul className="menu-list">
             <li className="menu-item">
-              <Link to="/" className="menu-link active">
+              <Link
+                to="/dashboard"
+                className={`menu-link ${
+                  location.pathname === "/dashboard" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineGridView size={18} />
                 </span>
@@ -68,7 +73,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/school-management" className="menu-link">
+              <Link
+                to="/school-management"
+                className={`menu-link ${
+                  location.pathname === "/school-management" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineBarChart size={20} />
                 </span>
@@ -76,7 +86,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/bus-management" className="menu-link">
+              <Link
+                to="/bus-management"
+                className={`menu-link ${
+                  location.pathname === "/bus-management" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineAttachMoney size={20} />
                 </span>
@@ -84,7 +99,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/school-selection" className="menu-link">
+              <Link
+                to="/school-selection"
+                className={`menu-link ${
+                  location.pathname === "/school-selection" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineCurrencyExchange size={18} />
                 </span>
@@ -92,7 +112,12 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/driver-management" className="menu-link">
+              <Link
+                to="/driver-management"
+                className={`menu-link ${
+                  location.pathname === "/driver-management" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineShoppingBag size={20} />
                 </span>
@@ -100,15 +125,29 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/spmschoolselection" className="menu-link">
+              <Link
+                to="/spmschoolselection"
+                className={`menu-link ${
+                  location.pathname === "/spmschoolselection" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlinePeople size={20} />
                 </span>
-                <span className="menu-link-text">Student/Parent Management</span>
+                <span className="menu-link-text">
+                  Student/Parent Management
+                </span>
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/notifications-management" className="menu-link">
+              <Link
+                to="/notifications-management"
+                className={`menu-link ${
+                  location.pathname === "/notifications-management"
+                    ? "active"
+                    : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineMessage size={18} />
                 </span>
@@ -116,23 +155,25 @@ const Sidebar = () => {
               </Link>
             </li>
             <li className="menu-item">
-              <Link to="/payment-management" className="menu-link">
+              <Link
+                to="/payment-management"
+                className={`menu-link ${
+                  location.pathname === "/payment-management" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineMessage size={18} />
                 </span>
                 <span className="menu-link-text">Payment Management</span>
               </Link>
             </li>
-            {/* <li className="menu-item">
-              <Link to="/reports" className="menu-link">
-                <span className="menu-link-icon">
-                  <MdOutlineMessage size={18} />
-                </span>
-                <span className="menu-link-text">Reports and Analytics</span>
-              </Link>
-            </li> */}
             <li className="menu-item">
-              <Link to="/admin-dashboard" className="menu-link">
+              <Link
+                to="/admin-dashboard"
+                className={`menu-link ${
+                  location.pathname === "/admin-dashboard" ? "active" : ""
+                }`}
+              >
                 <span className="menu-link-icon">
                   <MdOutlineMessage size={18} />
                 </span>

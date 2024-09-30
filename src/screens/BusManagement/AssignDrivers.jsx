@@ -5,10 +5,10 @@ import './AssignDrivers.scss';
 
 // Mock data for bus routes (replace with actual data)
 const busRoutes = [
-  { id: 1, schoolId: '1', routeName: 'Route 101' },
-  { id: 2, schoolId: '1', routeName: 'Route 102' },
-  { id: 3, schoolId: '2', routeName: 'Route 201' },
-  { id: 4, schoolId: '2', routeName: 'Route 202' }
+  { id: 1, schoolId: '1', routeName: 'Route 101', busNumber: 'Bus 101' },
+  { id: 2, schoolId: '1', routeName: 'Route 102', busNumber: 'Bus 102' },
+  { id: 3, schoolId: '2', routeName: 'Route 201', busNumber: 'Bus 201' },
+  { id: 4, schoolId: '2', routeName: 'Route 202', busNumber: 'Bus 202' }
 ];
 
 // Mock data for drivers (replace with actual driver list)
@@ -33,6 +33,10 @@ const AssignDrivers = () => {
       ...prevState,
       [routeId]: driverId
     }));
+    
+    // Display alert when driver is assigned
+    const assignedDriverName = drivers.find(driver => driver.id === Number(driverId))?.name;
+    window.alert(`Driver ${assignedDriverName} has been assigned to ${routeId}`);
   };
 
   return (
@@ -42,8 +46,8 @@ const AssignDrivers = () => {
         {filteredRoutes.length > 0 ? (
           filteredRoutes.map(route => (
             <div key={route.id} className="route-card">
-              <h2>{route.routeName}</h2>
-              <p>Bus route for school ID: {schoolId}</p>
+              <h2>{route.busNumber}</h2>
+              <p>Bus Route: {route.routeName}</p>
 
               <div className="driver-selection">
                 <label htmlFor={`driver-select-${route.id}`} className="driver-label">Assign Driver:</label>

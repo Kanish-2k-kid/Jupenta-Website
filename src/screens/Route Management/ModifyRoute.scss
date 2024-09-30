@@ -20,6 +20,134 @@ textarea {
   padding: 10px;
   margin-top: 5px;
 }
+.modify-route-page {
+  background-color: #f4f4f4; // Light background for better contrast
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; // Limit width for better readability
+  margin: 20px auto; // Center the form
+}
+
+h1 {
+  text-align: center;
+  color: #333; // Darker color for better readability
+}
+
+h2 {
+  color: #555; // Slightly lighter color for subheadings
+}
+
+.route-form {
+  display: flex;
+  flex-direction: column; // Stack elements vertically
+}
+
+.form-label {
+  margin: 15px 0; // Space between labels
+  font-weight: 600; // Bolder label
+}
+
+.form-input,
+.form-textarea,
+.dynamic-input,
+.stopping-input {
+  width: 100%; // Full width for inputs
+  padding: 10px; // Comfortable padding
+  border: 1px solid #ccc; // Subtle border
+  border-radius: 4px; // Slightly rounded corners
+  margin-top: 5px; // Space between label and input
+  font-size: 16px; // Larger font for readability
+}
+
+.form-textarea {
+  height: 100px; // Fixed height for textarea
+}
+
+.bus-input,
+.stopping-point-inputs {
+  margin: 10px 0; // Space between input fields
+}
+
+.stopping-point-inputs {
+  display: flex; // Flexbox to align inputs horizontally
+  gap: 10px; // Space between inputs
+  margin: 10px 0; // Space between stopping point sections
+}
+
+.add-bus-id-button,
+.add-stopping-point-button,
+.remove-stopping-point-button,
+.submit-button {
+  background-color: #007bff; // Bootstrap blue color
+  color: white;
+  border: none; // No border
+  border-radius: 4px; // Rounded corners
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 0; // Space above button
+  transition: background-color 0.3s; // Smooth hover effect
+}
+
+.add-bus-id-button:hover,
+.add-stopping-point-button:hover,
+.remove-stopping-point-button:hover,
+.submit-button:hover {
+  background-color: #0056b3; // Darker shade on hover
+}
+.modify-route-page {
+  .existing-routes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+  }
+
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    color: #aaa;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
 
 button {
   padding: 10px 20px;

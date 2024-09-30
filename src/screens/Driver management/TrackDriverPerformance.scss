@@ -4,24 +4,51 @@
 
   h1 {
     margin-bottom: 30px;
+    font-size: 28px;
+    color: #fff;
   }
 
   table {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
-    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Add subtle shadow for depth
+    background-color: white; // White background for the table
+
     th, td {
       padding: 15px;
       border: 1px solid #ddd;
+      text-align: left;
     }
 
     th {
-      background-color: #f2f2f2;
+      background-color: #007bff; // Blue header background
+      color: white;
+      font-weight: bold;
     }
 
     tr:nth-child(even) {
-      background-color: #f9f9f9;
+      background-color: #f9f9f9; // Light grey for even rows
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff; // White for odd rows
+    }
+
+    td {
+      vertical-align: middle; // Ensure all content is vertically centered
+    }
+
+    .performance-score {
+      font-weight: bold;
+      color: #28a745; // Green color for performance scores
+    }
+
+    .driver-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; // Circular images for drivers
+      object-fit: cover;
     }
   }
 }
